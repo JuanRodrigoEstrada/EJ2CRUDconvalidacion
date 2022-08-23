@@ -1,5 +1,6 @@
-package com.bosonit.EJ2CRUDconValidacionJuanRodrigo;
+package com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Infraestructure.Repository;
 
+import com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Domain.UsuarioEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,6 @@
-package com.bosonit.EJ2CRUDconValidacionJuanRodrigo;
+package com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Domain;
 
+import com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Infraestructure.DTO.Input.UsuarioInputDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -53,17 +54,17 @@ public class UsuarioEntity {
 
     public UsuarioEntity(UsuarioInputDTO usuarioInputDTO) {
         if (usuarioInputDTO == null) return;
-        id_persona = usuarioInputDTO.getId_persona();
-        usuario = usuarioInputDTO.getUsuario();
-        password = usuarioInputDTO.getPassword();
-        name = usuarioInputDTO.getName();
-        surname = usuarioInputDTO.getSurname();
-        company_email = usuarioInputDTO.getCompany_email();
-        personal_email = usuarioInputDTO.getPersonal_email();
-        city = usuarioInputDTO.getCity();
-        active = usuarioInputDTO.getActive();
-        created_date = usuarioInputDTO.getCreated_date();
-        imagen_url = usuarioInputDTO.getImagen_url();
-        termination_date = usuarioInputDTO.getTermination_date();
+        id_persona = usuarioInputDTO.id_persona();
+        usuario = usuarioInputDTO.usuario();
+        password = usuarioInputDTO.password();
+        name = usuarioInputDTO.name();
+        surname = usuarioInputDTO.surname();
+        company_email = usuarioInputDTO.company_email();
+        personal_email = usuarioInputDTO.personal_email();
+        city = usuarioInputDTO.city();
+        active = usuarioInputDTO.active();
+        created_date = usuarioInputDTO.created_date();
+        imagen_url = usuarioInputDTO.imagen_url();
+        termination_date = usuarioInputDTO.termination_date();
     }
 }

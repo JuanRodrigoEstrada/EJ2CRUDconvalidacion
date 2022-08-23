@@ -1,5 +1,9 @@
-package com.bosonit.EJ2CRUDconValidacionJuanRodrigo;
+package com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Infraestructure.Controller;
 
+import com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Domain.UsuarioEntity;
+import com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Infraestructure.DTO.Input.UsuarioInputDTO;
+import com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Infraestructure.DTO.Output.UsuarioOutputDTO;
+import com.bosonit.EJ2CRUDconValidacionJuanRodrigo.Infraestructure.Repository.UsuarioRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +18,7 @@ import java.util.Optional;
 
         @PostMapping("/crearUsuario")
         public UsuarioOutputDTO crearUsuario(@RequestBody UsuarioInputDTO usuarioInputDTO, UsuarioEntity usuarioEntity, UsuarioOutputDTO usuarioOutputDTO) throws Exception {
-            if (usuarioInputDTO.getUsuario().length() >= 6 && usuarioInputDTO.getUsuario().length() <= 10)
+            if (usuarioInputDTO.usuario().length() < 6 || usuarioInputDTO.usuario().length() > 10)
                 throw new Exception("El usuario debe tener entre 6 y 10 carácteres");
 
             usuarioEntity = new UsuarioEntity(usuarioInputDTO);
